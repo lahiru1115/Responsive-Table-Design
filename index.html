@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ZorroSign</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="./assets/exclude.png" alt="logo" />
+        <span>Logo.</span>
+      </div>
+      <div class="nav">
+        <div class="nav-top">
+          <div class="item">
+            <img src="./assets/dashboard.png" alt="Dashboard" />
+            <span>Dashboard</span>
+          </div>
+          <div class="item active">
+            <img src="./assets/transactions.png" alt="Transactions" />
+            <span>Transactions</span>
+          </div>
+          <div class="item">
+            <img src="./assets/invoices.png" alt="Invoices" />
+            <span>Invoices</span>
+          </div>
+          <div class="item">
+            <img src="./assets/my_wallets.png" alt="MyWallets" />
+            <span>My Wallets</span>
+          </div>
+          <div class="item">
+            <img src="./assets/settings.png" alt="Settings" />
+            <span>Settings</span>
+          </div>
+        </div>
+        <div class="nav-bottom">
+          <div class="item">
+            <img src="./assets/help.png" alt="Help" />
+            <span>Help</span>
+          </div>
+          <div class="item">
+            <img src="./assets/logout.png" alt="Logout" />
+            <span>Logout</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="topbar">
+        <div class="title"><span>Transactions</span></div>
+        <div class="topbar-right">
+          <div class="search">
+            <img src="./assets/search.png" alt="Search" />
+          </div>
+          <div class="notification">
+            <img src="./assets/notification.png" alt="Notification" />
+          </div>
+          <div class="profile">
+            <div class="name">
+              <img src="./assets/profile.png" alt="Profile" />
+              <span>Levi John</span>
+            </div>
+            <div class="dropdown">
+              <img src="./assets/dropdown.png" alt="Dropdown" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="searchbar">
+        <img src="./assets/search-black.png" alt="Search" />
+        <input placeholder="Search anything on Transactions" />
+      </div>
+      <div class="divider"></div>
+
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>Name/Business</th>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Invoice Id</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-title="Name/Business">
+                <div>
+                  <img src="./assets/iphone.png" alt="Image" />
+                  <div>
+                    <span class="name">Iphone 13 Pro MAX</span>
+                    <span class="business">Apple. Inc</span>
+                  </div>
+                </div>
+              </td>
+              <td data-title="Type">Mobile</td>
+              <td data-title="Amount">$420.84</td>
+              <td data-title="Date">
+                <div>
+                  <span class="date">14 Apr 2023</span>
+                  <span class="time">at 8:00 PM</span>
+                </div>
+              </td>
+              <td data-title="Invoice Id">MGL0124877</td>
+              <td data-title="Action">
+                <button>View</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-title="Name/Business">
+                <div>
+                  <img src="./assets/netflix.png" alt="Image" />
+                  <div>
+                    <span class="name">Netflix Subscription</span>
+                    <span class="business">Netflix</span>
+                  </div>
+                </div>
+              </td>
+              <td data-title="Type">Entertainment</td>
+              <td data-title="Amount">$100.00</td>
+              <td data-title="Date">
+                <div>
+                  <span class="date">05 Apr 2023</span>
+                  <span class="time">at 7:00 PM</span>
+                </div>
+              </td>
+              <td data-title="Invoice Id">MGL0124585</td>
+              <td data-title="Action">
+                <button>View</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-title="Name/Business">
+                <div>
+                  <img src="./assets/figma.png" alt="Image" />
+                  <div>
+                    <span class="name">Figma Subscription</span>
+                    <span class="business">Figma. Inc</span>
+                  </div>
+                </div>
+              </td>
+              <td data-title="Type">Software</td>
+              <td data-title="Amount">$244.20</td>
+              <td data-title="Date">
+                <div>
+                  <span class="date">02 Apr 2023</span>
+                  <span class="time">at 10:00 PM</span>
+                </div>
+              </td>
+              <td data-title="Invoice Id">MGL0124124</td>
+              <td data-title="Action">
+                <button>View</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

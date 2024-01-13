@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+:root {
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --color1: #1b212d;
+  --color2: #c8ee44;
+  --color3: #929eae;
+  --color4: #fafafa;
+}
+
+body {
+  height: 100%;
+  display: flex;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 250px;
+  min-height: 100vh;
+  background: var(--color4);
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+
+  & img {
+    width: 30px;
+  }
+
+  & span {
+    font-weight: bold;
+    font-size: 1.125em;
+    margin-left: 0.75rem;
+  }
+}
+
+.sidebar .nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 0.875rem;
+
+    & img {
+      width: 20px;
+    }
+
+    & span {
+      font-size: 1em;
+      font-weight: 500;
+      margin-left: 0.75rem;
+      color: var(--color3);
+    }
+
+    &.active {
+      border-radius: 8px;
+      background-color: var(--color2);
+
+      & span {
+        color: var(--color1);
+      }
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  padding: 1.5rem 2rem;
+}
+
+.content .topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+
+  .title {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .topbar-right {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+
+    .search img,
+    .notification img {
+      width: 20px;
+    }
+
+    .profile {
+      width: 180px;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--color4);
+      border-radius: 100px;
+
+      .name {
+        display: flex;
+        align-items: center;
+
+        & img {
+          width: 30px;
+        }
+
+        & span {
+          font-weight: 500;
+          font-size: 1em;
+          margin-left: 0.75rem;
+        }
+      }
+
+      .dropdown img {
+        width: 20px;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.content .searchbar {
+  width: 300px;
+  padding: 0.75rem;
+  display: flex;
+  margin-bottom: 1.25rem;
+  border-radius: 15px;
+  background-color: var(--color4);
+
+  & img {
+    width: 20px;
+  }
+
+  & input {
+    width: 100%;
+    margin-left: 0.75rem;
+    font: 1em var(--color3);
+    border: none;
+    background: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.content .divider {
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--color4);
+}
+
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+
+  & th {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    color: var(--color3);
+    padding-bottom: 2rem;
+  }
+
+  & td {
+    padding-bottom: 1.5rem;
+  }
+
+  & td[data-title="Name/Business"] div {
+    display: flex;
+
+    & img {
+      width: 40px;
+      margin-right: 0.75rem;
+    }
+
+    & div {
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .name {
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+
+      .business {
+        font-size: 0.75rem;
+        color: var(--color3);
+      }
+    }
+  }
+
+  & td[data-title="Type"],
+  td[data-title="Invoice Id"] {
+    font-size: 0.875rem;
+    color: var(--color3);
+  }
+
+  & td[data-title="Amount"] {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color1);
+  }
+
+  & td[data-title="Date"] div {
+    display: flex;
+    flex-direction: column;
+
+    .date {
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .time {
+      font-size: 0.75rem;
+      color: var(--color3);
+    }
+  }
+
+  & td[data-title="Action"] button {
+    border: none;
+    border-radius: 4px;
+    background: var(--color2);
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    width: 100px;
+  }
+
+  .sidebar .logo img {
+    margin-left: 0.75rem;
+  }
+
+  .sidebar .logo span,
+  .sidebar .nav .item span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content .topbar .topbar-right .profile {
+    width: fit-content;
+  }
+
+  .content .topbar .topbar-right .profile .name span,
+  .content .topbar .topbar-right .profile .dropdown img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .content table th {
+    display: none;
+  }
+
+  .content table tr:not(:first-child) {
+    border-top: 1px solid var(--color3);
+
+    & td[data-title="Name/Business"] {
+      padding-top: 2rem;
+    }
+  }
+
+  .content table td {
+    display: block;
+    text-align: right;
+  }
+
+  .content table td::before {
+    float: left;
+    content: attr(data-title);
+    text-transform: uppercase;
+    font-size: 0.875em;
+    font-weight: bold;
+    color: var(--color3);
+  }
+
+  .content table td[data-title="Name/Business"] div {
+    display: flex;
+    flex-direction: row-reverse;
+
+    & img {
+      margin-right: 0rem;
+      margin-left: 0.75rem;
+    }
+  }
+}
