@@ -2,7 +2,7 @@
 
 ![Screenshot 1](assets/screenshots/Screenshot-1.png)
 
-This project is a responsive table design that adapts to different screen sizes. It uses only HTML and CSS to create a clean and user-friendly interface for displaying tabular data.
+This project is a responsive table design that adapts to different screen sizes. It uses only HTML and CSS to create a clean and user-friendly interface for displaying product information.
 
 ## Responsive Design
 
